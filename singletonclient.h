@@ -7,6 +7,7 @@
 #include <QByteArray>
 #include <QDebug>
 
+//Клиент-синглтон для обмена сообщениями с сервером//
 class singletonclient;
 
 class singletonDestroyer
@@ -25,7 +26,8 @@ class singletonclient : public QObject
 private:
     static singletonclient* p_instance;
     static singletonDestroyer destroyer;
-    QTcpSocket* mTcpSocket;
+    QTcpSocket* mTcpSocket; //сокет
+    QByteArray data;
 protected:
     explicit singletonclient(QObject *parent = nullptr);
     singletonclient(singletonclient&) = delete;
@@ -33,11 +35,19 @@ protected:
     friend class singletonDestroyer;
 public:
     static singletonclient* getInst();
-    QByteArray sendmsgtoServer(QString query);
+    void sendToServer(QString msg); // Отправка сообщений на сервер
+    void messageManager(QString msg); //обработка сообщений от сервера
+    QString Username; // Логин авторизованного пользователя (для удобства)
 signals:
-    void messagefromServer(QString msg);
-private slots:
-    void slotServerRead();
+    void created(QString Qname, QString nick, QString QID);
+    void authorizationResult(bool result);
+    void registrationResult(bool result);
+    void logout();
+    void added(QString QID,QString Qname, QString nick, QString position, QStringList members);
+    void newInQ(QString nick, QString position);
+    void left(QString position);
+public slots:
+    void slotReadyRead();
 };
 
 
