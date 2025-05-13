@@ -1,0 +1,53 @@
+\doxysection{authregform.\+h}
+\hypertarget{authregform_8h_source}{}\label{authregform_8h_source}\mbox{\hyperlink{authregform_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ AUTHREGFORM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ AUTHREGFORM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{logic_8h}{logic.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_auth_reg_form}{AuthRegForm}};}
+\DoxyCodeLine{00009\ \}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_auth_reg_form_a7ec2ba2a7980453c629e141a90602e68}{AuthRegForm}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_auth_reg_form_a7ec2ba2a7980453c629e141a90602e68}{AuthRegForm}}(QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_auth_reg_form_a8b95ad00c5d29338f850a0f179b12078}{\string~AuthRegForm}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_auth_reg_form_ad352ff103aa3c3d18d71e79e9772e8c1}{clear}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_auth_reg_form_a6792110e2e7cd102eb4f604f47844d0c}{error}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ QString\ \mbox{\hyperlink{class_auth_reg_form_a35a1cffa79e1bfd342c31a7e37db87b0}{getLogin}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ signals:}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_auth_reg_form_a16ebb669674e2027f9a4b0c5fb5e15cc}{registrate}}(QString,\ QString,\ QString,\ QString,\ QString);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_upin\_clicked();}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_Log\_in\_clicked();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_lineEdit\_login\_textChanged(\textcolor{keyword}{const}\ QString\&\ arg1);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_lineEdit\_pass\_textChanged(\textcolor{keyword}{const}\ QString\&\ arg1);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_lineEdit\_Nick\_textChanged(\textcolor{keyword}{const}\ QString\&\ arg1);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_lineEdit\_check\_textChanged(\textcolor{keyword}{const}\ QString\&\ arg1);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_lineEdit\_mail\_textChanged(\textcolor{keyword}{const}\ QString\&\ arg1);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_Reg\_in\_clicked();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_ui_1_1_auth_reg_form}{Ui::AuthRegForm}}*\ ui;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ Reg\_mode(\textcolor{keywordtype}{bool}\ is\_reg);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ conds[5]\ =\ \{\ 0,0,0,0,0\ \};\ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ allConditions(\textcolor{keywordtype}{bool}\ cons[]);}
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ AUTHREGFORM\_H}}
+
+\end{DoxyCode}

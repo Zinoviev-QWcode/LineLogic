@@ -1,0 +1,115 @@
+\doxysection{ui\+\_\+queuecreator.\+h}
+\hypertarget{ui__queuecreator_8h_source}{}\label{ui__queuecreator_8h_source}\mbox{\hyperlink{ui__queuecreator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ Form\ generated\ from\ reading\ UI\ file\ 'queuecreator.ui'}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Created\ by:\ Qt\ User\ Interface\ Compiler\ version\ 6.8.2}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**\ WARNING!\ All\ changes\ made\ in\ this\ file\ will\ be\ lost\ when\ recompiling\ UI\ file!}}
+\DoxyCodeLine{00007\ \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ UI\_QUEUECREATOR\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ UI\_QUEUECREATOR\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QtCore/QVariant>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QtWidgets/QApplication>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QtWidgets/QDialog>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QtWidgets/QHBoxLayout>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QtWidgets/QLabel>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QtWidgets/QLineEdit>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QtWidgets/QPushButton>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QtWidgets/QWidget>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui___queue_creator}{Ui\_QueueCreator}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ QLabel\ *\mbox{\hyperlink{class_ui___queue_creator_ac33edb3c447fd5e7604eb2d4309a3681}{Logo}};}
+\DoxyCodeLine{00027\ \ \ \ \ QLabel\ *\mbox{\hyperlink{class_ui___queue_creator_a9c96d60df6bb2e2edc85953180126dbd}{hint}};}
+\DoxyCodeLine{00028\ \ \ \ \ QLineEdit\ *\mbox{\hyperlink{class_ui___queue_creator_a591ad0db942b0d36f514dd868931b3e5}{QueueName}};}
+\DoxyCodeLine{00029\ \ \ \ \ QWidget\ *\mbox{\hyperlink{class_ui___queue_creator_aabdd85d54b067bb608b5ece7b902d5a2}{horizontalLayoutWidget}};}
+\DoxyCodeLine{00030\ \ \ \ \ QHBoxLayout\ *\mbox{\hyperlink{class_ui___queue_creator_a0e20a9a0221e9a5726fee35f57cc2a6a}{horizontalLayout}};}
+\DoxyCodeLine{00031\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_ui___queue_creator_a18568007e9f9da355c367d9e4280df5c}{Cancel}};}
+\DoxyCodeLine{00032\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_ui___queue_creator_a442bc9d4809214f16402f63e5b84b55d}{Create}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ui___queue_creator_a9ce81d431d78cc340111ed2805c27275}{setupUi}}(QDialog\ *\mbox{\hyperlink{class_queue_creator}{QueueCreator}})}
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_queue_creator}{QueueCreator}}-\/>objectName().isEmpty())}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_queue_creator}{QueueCreator}}-\/>setObjectName(\textcolor{stringliteral}{"{}QueueCreator"{}});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_queue_creator}{QueueCreator}}-\/>resize(400,\ 382);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_queue_creator}{QueueCreator}}-\/>setMinimumSize(QSize(400,\ 382));}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_queue_creator}{QueueCreator}}-\/>setMaximumSize(QSize(400,\ 382));}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_queue_creator}{QueueCreator}}-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}background-\/color:\ rgb(67,\ 67,\ 67);"{}}));}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_ac33edb3c447fd5e7604eb2d4309a3681}{Logo}}\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_queue_creator}{QueueCreator}});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_ac33edb3c447fd5e7604eb2d4309a3681}{Logo}}-\/>setObjectName(\textcolor{stringliteral}{"{}Logo"{}});}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_ac33edb3c447fd5e7604eb2d4309a3681}{Logo}}-\/>setGeometry(QRect(120,\ 20,\ 161,\ 131));}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_ac33edb3c447fd5e7604eb2d4309a3681}{Logo}}-\/>setPixmap(QPixmap(QString::fromUtf8(\textcolor{stringliteral}{"{}:/new/prefix1/images/Pictuh.png"{}})));}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_ac33edb3c447fd5e7604eb2d4309a3681}{Logo}}-\/>setScaledContents(\textcolor{keyword}{true});}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a9c96d60df6bb2e2edc85953180126dbd}{hint}}\ =\ \textcolor{keyword}{new}\ QLabel(\mbox{\hyperlink{class_queue_creator}{QueueCreator}});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a9c96d60df6bb2e2edc85953180126dbd}{hint}}-\/>setObjectName(\textcolor{stringliteral}{"{}hint"{}});}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a9c96d60df6bb2e2edc85953180126dbd}{hint}}-\/>setGeometry(QRect(10,\ 170,\ 381,\ 41));}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a9c96d60df6bb2e2edc85953180126dbd}{hint}}-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}font:\ 600\ 12pt\ \(\backslash\)"{}Segoe\ UI\(\backslash\)"{};\(\backslash\)n"{}}}
+\DoxyCodeLine{00051\ \textcolor{stringliteral}{"{}color:\ rgb(255,\ 255,\ 255);"{}}));}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a591ad0db942b0d36f514dd868931b3e5}{QueueName}}\ =\ \textcolor{keyword}{new}\ QLineEdit(\mbox{\hyperlink{class_queue_creator}{QueueCreator}});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a591ad0db942b0d36f514dd868931b3e5}{QueueName}}-\/>setObjectName(\textcolor{stringliteral}{"{}QueueName"{}});}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a591ad0db942b0d36f514dd868931b3e5}{QueueName}}-\/>setGeometry(QRect(70,\ 230,\ 281,\ 31));}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a591ad0db942b0d36f514dd868931b3e5}{QueueName}}-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}background-\/color:\ rgb(255,\ 255,\ 255);"{}}));}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_aabdd85d54b067bb608b5ece7b902d5a2}{horizontalLayoutWidget}}\ =\ \textcolor{keyword}{new}\ QWidget(\mbox{\hyperlink{class_queue_creator}{QueueCreator}});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_aabdd85d54b067bb608b5ece7b902d5a2}{horizontalLayoutWidget}}-\/>setObjectName(\textcolor{stringliteral}{"{}horizontalLayoutWidget"{}});}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_aabdd85d54b067bb608b5ece7b902d5a2}{horizontalLayoutWidget}}-\/>setGeometry(QRect(60,\ 270,\ 309,\ 51));}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a0e20a9a0221e9a5726fee35f57cc2a6a}{horizontalLayout}}\ =\ \textcolor{keyword}{new}\ QHBoxLayout(\mbox{\hyperlink{class_ui___queue_creator_aabdd85d54b067bb608b5ece7b902d5a2}{horizontalLayoutWidget}});}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a0e20a9a0221e9a5726fee35f57cc2a6a}{horizontalLayout}}-\/>setObjectName(\textcolor{stringliteral}{"{}horizontalLayout"{}});}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a0e20a9a0221e9a5726fee35f57cc2a6a}{horizontalLayout}}-\/>setContentsMargins(0,\ 0,\ 0,\ 0);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a18568007e9f9da355c367d9e4280df5c}{Cancel}}\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_ui___queue_creator_aabdd85d54b067bb608b5ece7b902d5a2}{horizontalLayoutWidget}});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a18568007e9f9da355c367d9e4280df5c}{Cancel}}-\/>setObjectName(\textcolor{stringliteral}{"{}Cancel"{}});}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a18568007e9f9da355c367d9e4280df5c}{Cancel}}-\/>setMinimumSize(QSize(150,\ 40));}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a18568007e9f9da355c367d9e4280df5c}{Cancel}}-\/>setMaximumSize(QSize(150,\ 40));}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a18568007e9f9da355c367d9e4280df5c}{Cancel}}-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}background-\/color:\ rgb(185,\ 58,\ 216);\(\backslash\)n"{}}}
+\DoxyCodeLine{00067\ \textcolor{stringliteral}{"{}font:\ 600\ 10pt\ \(\backslash\)"{}Segoe\ UI\(\backslash\)"{};\(\backslash\)n"{}}}
+\DoxyCodeLine{00068\ \textcolor{stringliteral}{"{}color:\ rgb(255,\ 255,\ 255);\(\backslash\)n"{}}}
+\DoxyCodeLine{00069\ \textcolor{stringliteral}{"{}border-\/radius:\ 20px;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}}}
+\DoxyCodeLine{00070\ \textcolor{stringliteral}{"{}border:\ 2px\ solid\ \ rgb(185,58,216)"{}}));}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a18568007e9f9da355c367d9e4280df5c}{Cancel}}-\/>setAutoDefault(\textcolor{keyword}{false});}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a0e20a9a0221e9a5726fee35f57cc2a6a}{horizontalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___queue_creator_a18568007e9f9da355c367d9e4280df5c}{Cancel}});}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a442bc9d4809214f16402f63e5b84b55d}{Create}}\ =\ \textcolor{keyword}{new}\ QPushButton(\mbox{\hyperlink{class_ui___queue_creator_aabdd85d54b067bb608b5ece7b902d5a2}{horizontalLayoutWidget}});}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a442bc9d4809214f16402f63e5b84b55d}{Create}}-\/>setObjectName(\textcolor{stringliteral}{"{}Create"{}});}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a442bc9d4809214f16402f63e5b84b55d}{Create}}-\/>setMinimumSize(QSize(150,\ 40));}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a442bc9d4809214f16402f63e5b84b55d}{Create}}-\/>setMaximumSize(QSize(150,\ 40));}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a442bc9d4809214f16402f63e5b84b55d}{Create}}-\/>setStyleSheet(QString::fromUtf8(\textcolor{stringliteral}{"{}background-\/color:\ rgb(231,\ 73,\ 216);\(\backslash\)n"{}}}
+\DoxyCodeLine{00080\ \textcolor{stringliteral}{"{}font:\ 600\ 10pt\ \(\backslash\)"{}Segoe\ UI\(\backslash\)"{};\(\backslash\)n"{}}}
+\DoxyCodeLine{00081\ \textcolor{stringliteral}{"{}color:\ rgb(255,\ 255,\ 255);\(\backslash\)n"{}}}
+\DoxyCodeLine{00082\ \textcolor{stringliteral}{"{}border-\/radius:\ 20px;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}}}
+\DoxyCodeLine{00083\ \textcolor{stringliteral}{"{}border:\ 2px\ solid\ \ rgb(231,73,216)"{}}));}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a0e20a9a0221e9a5726fee35f57cc2a6a}{horizontalLayout}}-\/>addWidget(\mbox{\hyperlink{class_ui___queue_creator_a442bc9d4809214f16402f63e5b84b55d}{Create}});}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a4c13b3afd456de429b9bb0fa9b563af1}{retranslateUi}}(\mbox{\hyperlink{class_queue_creator}{QueueCreator}});}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ QMetaObject::connectSlotsByName(\mbox{\hyperlink{class_queue_creator}{QueueCreator}});}
+\DoxyCodeLine{00091\ \ \ \ \ \}\ \textcolor{comment}{//\ setupUi}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ui___queue_creator_a4c13b3afd456de429b9bb0fa9b563af1}{retranslateUi}}(QDialog\ *\mbox{\hyperlink{class_queue_creator}{QueueCreator}})}
+\DoxyCodeLine{00094\ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_queue_creator}{QueueCreator}}-\/>setWindowTitle(QCoreApplication::translate(\textcolor{stringliteral}{"{}QueueCreator"{}},\ \textcolor{stringliteral}{"{}Creator"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_ac33edb3c447fd5e7604eb2d4309a3681}{Logo}}-\/>setText(QString());}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a9c96d60df6bb2e2edc85953180126dbd}{hint}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}QueueCreator"{}},\ \textcolor{stringliteral}{"{}<html><head/><body><p\ align=\(\backslash\)"{}center\(\backslash\)"{}>Enter\ a\ name\ for\ your\ queue\ (\&gt;3\ characters)</p></body></html>"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a18568007e9f9da355c367d9e4280df5c}{Cancel}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}QueueCreator"{}},\ \textcolor{stringliteral}{"{}Cancel"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ui___queue_creator_a442bc9d4809214f16402f63e5b84b55d}{Create}}-\/>setText(QCoreApplication::translate(\textcolor{stringliteral}{"{}QueueCreator"{}},\ \textcolor{stringliteral}{"{}Create"{}},\ \textcolor{keyword}{nullptr}));}
+\DoxyCodeLine{00100\ \ \ \ \ \}\ \textcolor{comment}{//\ retranslateUi}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_queue_creator}{QueueCreator}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_ui___queue_creator}{Ui\_QueueCreator}}\ \{\};}
+\DoxyCodeLine{00106\ \}\ \textcolor{comment}{//\ namespace\ Ui}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UI\_QUEUECREATOR\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,64 @@
+\doxysection{databaseinterface.\+h}
+\hypertarget{databaseinterface_8h_source}{}\label{databaseinterface_8h_source}\mbox{\hyperlink{databaseinterface_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DATABASEINTERFACE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DATABASEINTERFACE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QSqlDatabase>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QSqlQuery>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdatabase_interface}{databaseInterface}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classinterface_destroyer}{interfaceDestroyer}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classdatabase_interface}{databaseInterface}}*\ p\_instance;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classinterface_destroyer_a2f2699e9cc57f8e8b3eb6457a0317a21}{\string~interfaceDestroyer}}()\ \{\ \textcolor{keyword}{delete}\ p\_instance;\ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classinterface_destroyer_ac828cfda673ec5b37fa4ed83f850ad53}{init}}(\mbox{\hyperlink{classdatabase_interface}{databaseInterface}}*\ p)\ \{\ p\_instance\ =\ p;\ \}}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdatabase_interface_ac3f8b0eab61314e752623f265a33005c}{databaseInterface}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ QString\ \mbox{\hyperlink{classdatabase_interface_a209508028b44a6d4c1a07139418956ea}{getUserID}}(QString\ login);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ QString\ \mbox{\hyperlink{classdatabase_interface_a00cfae535dc2680453934ef3a1b47c3d}{getPosition}}(QString\ QID);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ QString\ \mbox{\hyperlink{classdatabase_interface_ab5cf9a9cf30efe37987ac89d03c8f8e7}{getQID}}(QString\ name);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ QString\ \mbox{\hyperlink{classdatabase_interface_a3764271df348e055623c074e8806160a}{getNick}}(QString\ UserID);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ QString\ \mbox{\hyperlink{classdatabase_interface_a69d3899bfeede5189564bae1a99cf7fa}{getQName}}(QString\ QID);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ QStringList\ \mbox{\hyperlink{classdatabase_interface_a12862d9f16f966096e29bd04eca32a6f}{getQMembers}}(QString\ QID);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00078\ \ \ \ \ QString\ \mbox{\hyperlink{classdatabase_interface_a6b6398daa6dab8fa2be8961b3659b32b}{authorize}}(QString\ login,\ QString\ password);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00088\ \ \ \ \ QString\ \mbox{\hyperlink{classdatabase_interface_a51e4386a12d3212f2154c573eb0b578f}{reg}}(QString\ login,\ QString\ nick,\ QString\ password,\ QString\ mail);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00096\ \ \ \ \ QString\ \mbox{\hyperlink{classdatabase_interface_adcd59d9e804eed1d54e1fc126d4f7df3}{create}}(QString\ name,\ QString\ login);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00104\ \ \ \ \ QString\ \mbox{\hyperlink{classdatabase_interface_ab3e00715b4b889f1c21b29295c9ef8dc}{GoToQ}}(QString\ QID,\ QString\ User);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00112\ \ \ \ \ QString\ \mbox{\hyperlink{classdatabase_interface_aff6acf0b2ee6ec52b1a4f567c64e6fe1}{leave}}(QString\ login,\ QString\ QID);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classdatabase_interface_ac3f8b0eab61314e752623f265a33005c}{databaseInterface}}*\ p\_instance;}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classdatabase_interface_a29404c4f0bcd828c7e9ba1ea049690f4}{interfaceDestroyer}}\ destroyer;}
+\DoxyCodeLine{00117\ \ \ \ \ QSqlDatabase\ db;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00118\ \ \ \ \ QSqlQuery*\ query;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classdatabase_interface_ac3f8b0eab61314e752623f265a33005c}{databaseInterface}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{classdatabase_interface_ad00598cc3197982f61c35d4070a21d64}{databaseInterface}}(\mbox{\hyperlink{classdatabase_interface_ac3f8b0eab61314e752623f265a33005c}{databaseInterface}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{classdatabase_interface_a0e8b02e92894d2dd0968915a5e1bd7b2}{\string~databaseInterface}}();}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdatabase_interface_a29404c4f0bcd828c7e9ba1ea049690f4}{interfaceDestroyer}};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classdatabase_interface_ac3f8b0eab61314e752623f265a33005c}{databaseInterface}}*\ \mbox{\hyperlink{classdatabase_interface_af797aa9d3649ad04ebc44cc7229ff06e}{getInst}}();}
+\DoxyCodeLine{00132\ \};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DATABASEINTERFACE\_H}}
+
+\end{DoxyCode}

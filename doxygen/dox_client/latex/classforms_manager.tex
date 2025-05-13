@@ -1,0 +1,233 @@
+\doxysection{forms\+Manager Class Reference}
+\hypertarget{classforms_manager}{}\label{classforms_manager}\index{formsManager@{formsManager}}
+
+
+The \doxylink{classforms_manager}{forms\+Manager} class manages the application\textquotesingle{}s window transitions.  
+
+
+
+
+{\ttfamily \#include $<$formsmanager.\+h$>$}
+
+Inheritance diagram for forms\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classforms_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classforms_manager_af8a07f27eeea4f17096f49316f40e1e4}{from\+Login\+To\+Hub}} (bool result)
+\begin{DoxyCompactList}\small\item\em Handles transition from login to hub window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classforms_manager_abf2a49ba7564fcccd8dc410582ac496f}{from\+Reg\+To\+Hub}} (bool result)
+\begin{DoxyCompactList}\small\item\em Handles transition from registration to hub window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classforms_manager_addfb9e0df4a699b8938c7eae7c6e6144}{from\+Hub\+To\+Login}} ()
+\begin{DoxyCompactList}\small\item\em Handles transition from hub back to login window (logout). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classforms_manager_acd5bf7ee73980358d860b304dbb90fae}{from\+Hub\+ToQ}} (QString QID, QString Qname, QString nick, QString position, QString\+List members)
+\begin{DoxyCompactList}\small\item\em Handles transition from hub to queue window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classforms_manager_a1a472e0fa3733d37e886d2862849809f}{from\+QTo\+Hub}} ()
+\begin{DoxyCompactList}\small\item\em Handles transition from queue back to hub window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classforms_manager_ae4d334ccaf046e3cc84dc1b06c28c1e1}{from\+Hub\+To\+Creator}} ()
+\begin{DoxyCompactList}\small\item\em Handles transition from hub to queue creator window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classforms_manager_ac2d44fd8d188b5b776cd35828283e127}{from\+Creator\+To\+Hub}} ()
+\begin{DoxyCompactList}\small\item\em Handles transition from creator back to hub window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classforms_manager_a49e4e0fc9f07297e459041454bd35c58}{from\+Creator\+ToQ}} (QString name, QString nick, QString QID)
+\begin{DoxyCompactList}\small\item\em Handles transition from creator to newly created queue window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classforms_manager_a66ea80bd44045851537210442ecaf152}{QUpdate}} (QString nick, QString position)
+\begin{DoxyCompactList}\small\item\em Updates queue when a new user joins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classforms_manager_a8f12aeade5c0f214710c0912df108c6d}{Qleft}} (QString position)
+\begin{DoxyCompactList}\small\item\em Updates queue when a user leaves. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classforms_manager_a9c98a9f779ef92c54a93454decb66a4a}{forms\+Manager}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{classforms_manager}{forms\+Manager} and initializes all windows. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classforms_manager_acf133469501b7f182f8301d09ee096d9}{\texorpdfstring{$\sim$}{\string~}forms\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{classforms_manager}{forms\+Manager} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classforms_manager}{forms\+Manager} class manages the application\textquotesingle{}s window transitions. 
+
+This class handles the creation and management of all application windows and the transitions between them (authentication, queue hub, queue creator, etc.). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classforms_manager_a9c98a9f779ef92c54a93454decb66a4a}\index{formsManager@{formsManager}!formsManager@{formsManager}}
+\index{formsManager@{formsManager}!formsManager@{formsManager}}
+\doxysubsubsection{\texorpdfstring{formsManager()}{formsManager()}}
+{\footnotesize\ttfamily \label{classforms_manager_a9c98a9f779ef92c54a93454decb66a4a} 
+forms\+Manager\+::forms\+Manager (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Constructs the \doxylink{classforms_manager}{forms\+Manager} and initializes all windows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent widget \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classforms_manager_acf133469501b7f182f8301d09ee096d9}\index{formsManager@{formsManager}!````~formsManager@{\texorpdfstring{$\sim$}{\string~}formsManager}}
+\index{````~formsManager@{\texorpdfstring{$\sim$}{\string~}formsManager}!formsManager@{formsManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}formsManager()}{\string~formsManager()}}
+{\footnotesize\ttfamily \label{classforms_manager_acf133469501b7f182f8301d09ee096d9} 
+forms\+Manager\+::\texorpdfstring{$\sim$}{\string~}forms\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the \doxylink{classforms_manager}{forms\+Manager} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classforms_manager_ac2d44fd8d188b5b776cd35828283e127}\index{formsManager@{formsManager}!fromCreatorToHub@{fromCreatorToHub}}
+\index{fromCreatorToHub@{fromCreatorToHub}!formsManager@{formsManager}}
+\doxysubsubsection{\texorpdfstring{fromCreatorToHub}{fromCreatorToHub}}
+{\footnotesize\ttfamily \label{classforms_manager_ac2d44fd8d188b5b776cd35828283e127} 
+void forms\+Manager\+::from\+Creator\+To\+Hub (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles transition from creator back to hub window. 
+
+\Hypertarget{classforms_manager_a49e4e0fc9f07297e459041454bd35c58}\index{formsManager@{formsManager}!fromCreatorToQ@{fromCreatorToQ}}
+\index{fromCreatorToQ@{fromCreatorToQ}!formsManager@{formsManager}}
+\doxysubsubsection{\texorpdfstring{fromCreatorToQ}{fromCreatorToQ}}
+{\footnotesize\ttfamily \label{classforms_manager_a49e4e0fc9f07297e459041454bd35c58} 
+void forms\+Manager\+::from\+Creator\+ToQ (\begin{DoxyParamCaption}\item[{QString}]{name}{, }\item[{QString}]{nick}{, }\item[{QString}]{QID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles transition from creator to newly created queue window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_queue}{Queue} name \\
+\hline
+{\em nick} & Creator\textquotesingle{}s nickname \\
+\hline
+{\em QID} & \doxylink{class_queue}{Queue} identifier \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classforms_manager_ae4d334ccaf046e3cc84dc1b06c28c1e1}\index{formsManager@{formsManager}!fromHubToCreator@{fromHubToCreator}}
+\index{fromHubToCreator@{fromHubToCreator}!formsManager@{formsManager}}
+\doxysubsubsection{\texorpdfstring{fromHubToCreator}{fromHubToCreator}}
+{\footnotesize\ttfamily \label{classforms_manager_ae4d334ccaf046e3cc84dc1b06c28c1e1} 
+void forms\+Manager\+::from\+Hub\+To\+Creator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles transition from hub to queue creator window. 
+
+\Hypertarget{classforms_manager_addfb9e0df4a699b8938c7eae7c6e6144}\index{formsManager@{formsManager}!fromHubToLogin@{fromHubToLogin}}
+\index{fromHubToLogin@{fromHubToLogin}!formsManager@{formsManager}}
+\doxysubsubsection{\texorpdfstring{fromHubToLogin}{fromHubToLogin}}
+{\footnotesize\ttfamily \label{classforms_manager_addfb9e0df4a699b8938c7eae7c6e6144} 
+void forms\+Manager\+::from\+Hub\+To\+Login (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles transition from hub back to login window (logout). 
+
+\Hypertarget{classforms_manager_acd5bf7ee73980358d860b304dbb90fae}\index{formsManager@{formsManager}!fromHubToQ@{fromHubToQ}}
+\index{fromHubToQ@{fromHubToQ}!formsManager@{formsManager}}
+\doxysubsubsection{\texorpdfstring{fromHubToQ}{fromHubToQ}}
+{\footnotesize\ttfamily \label{classforms_manager_acd5bf7ee73980358d860b304dbb90fae} 
+void forms\+Manager\+::from\+Hub\+ToQ (\begin{DoxyParamCaption}\item[{QString}]{QID}{, }\item[{QString}]{Qname}{, }\item[{QString}]{nick}{, }\item[{QString}]{position}{, }\item[{QString\+List}]{members}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles transition from hub to queue window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em QID} & \doxylink{class_queue}{Queue} identifier \\
+\hline
+{\em Qname} & \doxylink{class_queue}{Queue} name \\
+\hline
+{\em nick} & User\textquotesingle{}s nickname \\
+\hline
+{\em position} & User\textquotesingle{}s position in queue \\
+\hline
+{\em members} & List of queue members \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classforms_manager_af8a07f27eeea4f17096f49316f40e1e4}\index{formsManager@{formsManager}!fromLoginToHub@{fromLoginToHub}}
+\index{fromLoginToHub@{fromLoginToHub}!formsManager@{formsManager}}
+\doxysubsubsection{\texorpdfstring{fromLoginToHub}{fromLoginToHub}}
+{\footnotesize\ttfamily \label{classforms_manager_af8a07f27eeea4f17096f49316f40e1e4} 
+void forms\+Manager\+::from\+Login\+To\+Hub (\begin{DoxyParamCaption}\item[{bool}]{result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles transition from login to hub window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & True if login was successful, false otherwise \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classforms_manager_a1a472e0fa3733d37e886d2862849809f}\index{formsManager@{formsManager}!fromQToHub@{fromQToHub}}
+\index{fromQToHub@{fromQToHub}!formsManager@{formsManager}}
+\doxysubsubsection{\texorpdfstring{fromQToHub}{fromQToHub}}
+{\footnotesize\ttfamily \label{classforms_manager_a1a472e0fa3733d37e886d2862849809f} 
+void forms\+Manager\+::from\+QTo\+Hub (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles transition from queue back to hub window. 
+
+\Hypertarget{classforms_manager_abf2a49ba7564fcccd8dc410582ac496f}\index{formsManager@{formsManager}!fromRegToHub@{fromRegToHub}}
+\index{fromRegToHub@{fromRegToHub}!formsManager@{formsManager}}
+\doxysubsubsection{\texorpdfstring{fromRegToHub}{fromRegToHub}}
+{\footnotesize\ttfamily \label{classforms_manager_abf2a49ba7564fcccd8dc410582ac496f} 
+void forms\+Manager\+::from\+Reg\+To\+Hub (\begin{DoxyParamCaption}\item[{bool}]{result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles transition from registration to hub window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & True if registration was successful, false otherwise \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classforms_manager_a8f12aeade5c0f214710c0912df108c6d}\index{formsManager@{formsManager}!Qleft@{Qleft}}
+\index{Qleft@{Qleft}!formsManager@{formsManager}}
+\doxysubsubsection{\texorpdfstring{Qleft}{Qleft}}
+{\footnotesize\ttfamily \label{classforms_manager_a8f12aeade5c0f214710c0912df108c6d} 
+void forms\+Manager\+::\+Qleft (\begin{DoxyParamCaption}\item[{QString}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Updates queue when a user leaves. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of the user who left \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classforms_manager_a66ea80bd44045851537210442ecaf152}\index{formsManager@{formsManager}!QUpdate@{QUpdate}}
+\index{QUpdate@{QUpdate}!formsManager@{formsManager}}
+\doxysubsubsection{\texorpdfstring{QUpdate}{QUpdate}}
+{\footnotesize\ttfamily \label{classforms_manager_a66ea80bd44045851537210442ecaf152} 
+void forms\+Manager\+::\+QUpdate (\begin{DoxyParamCaption}\item[{QString}]{nick}{, }\item[{QString}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Updates queue when a new user joins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nick} & New user\textquotesingle{}s nickname \\
+\hline
+{\em position} & New user\textquotesingle{}s position \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{formsmanager_8h}{formsmanager.\+h}}\item 
+\mbox{\hyperlink{formsmanager_8cpp}{formsmanager.\+cpp}}\end{DoxyCompactItemize}

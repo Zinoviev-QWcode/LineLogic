@@ -1,0 +1,109 @@
+\doxysection{Server Class Reference}
+\hypertarget{class_server}{}\label{class_server}\index{Server@{Server}}
+
+
+The \doxylink{class_server}{Server} class handles TCP server operations and client communications.  
+
+
+
+
+{\ttfamily \#include $<$server.\+h$>$}
+
+Inheritance diagram for Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_server}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_server_a3952d37b7bc53a4377f411d9ccaa9d62}{incoming\+Connection}} (qintptr socket\+Descriptor)
+\begin{DoxyCompactList}\small\item\em Handles new incoming connections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_server_ad7f0bc4f93fa08a16565f7f22cc562c5}{slot\+Ready\+Read}} ()
+\begin{DoxyCompactList}\small\item\em Handles incoming data from clients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_server_a3211e1b564de89a5098ee1fbef6df5a3}{client\+Disconnected}} ()
+\begin{DoxyCompactList}\small\item\em Handles client disconnections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_server_ad5ec9462b520e59f7ea831e157ee5e59}{Server}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the server and starts listening on port 33333. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QTcp\+Socket \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_server_ac7f958096890d0442b711a38000a02f7}{socket}}
+\begin{DoxyCompactList}\small\item\em Current active socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_server}{Server} class handles TCP server operations and client communications. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_server_ad5ec9462b520e59f7ea831e157ee5e59}\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily \label{class_server_ad5ec9462b520e59f7ea831e157ee5e59} 
+Server\+::\+Server (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs the server and starts listening on port 33333. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_server_a3211e1b564de89a5098ee1fbef6df5a3}\index{Server@{Server}!clientDisconnected@{clientDisconnected}}
+\index{clientDisconnected@{clientDisconnected}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{clientDisconnected}{clientDisconnected}}
+{\footnotesize\ttfamily \label{class_server_a3211e1b564de89a5098ee1fbef6df5a3} 
+void Server\+::client\+Disconnected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles client disconnections. 
+
+\Hypertarget{class_server_a3952d37b7bc53a4377f411d9ccaa9d62}\index{Server@{Server}!incomingConnection@{incomingConnection}}
+\index{incomingConnection@{incomingConnection}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{incomingConnection}{incomingConnection}}
+{\footnotesize\ttfamily \label{class_server_a3952d37b7bc53a4377f411d9ccaa9d62} 
+void Server\+::incoming\+Connection (\begin{DoxyParamCaption}\item[{qintptr}]{socket\+Descriptor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles new incoming connections. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket\+Descriptor} & Socket descriptor for new connection \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_server_ad7f0bc4f93fa08a16565f7f22cc562c5}\index{Server@{Server}!slotReadyRead@{slotReadyRead}}
+\index{slotReadyRead@{slotReadyRead}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{slotReadyRead}{slotReadyRead}}
+{\footnotesize\ttfamily \label{class_server_ad7f0bc4f93fa08a16565f7f22cc562c5} 
+void Server\+::slot\+Ready\+Read (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles incoming data from clients. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_server_ac7f958096890d0442b711a38000a02f7}\index{Server@{Server}!socket@{socket}}
+\index{socket@{socket}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{socket}{socket}}
+{\footnotesize\ttfamily \label{class_server_ac7f958096890d0442b711a38000a02f7} 
+QTcp\+Socket\texorpdfstring{$\ast$}{*} Server\+::socket}
+
+
+
+Current active socket. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{server_8h}{server.\+h}}\item 
+\mbox{\hyperlink{server_8cpp}{server.\+cpp}}\end{DoxyCompactItemize}

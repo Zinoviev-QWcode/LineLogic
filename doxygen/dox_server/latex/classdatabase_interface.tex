@@ -1,0 +1,345 @@
+\doxysection{database\+Interface Class Reference}
+\hypertarget{classdatabase_interface}{}\label{classdatabase_interface}\index{databaseInterface@{databaseInterface}}
+
+
+The \doxylink{classdatabase_interface}{database\+Interface} class provides a singleton interface for database operations.  
+
+
+
+
+{\ttfamily \#include $<$databaseinterface.\+h$>$}
+
+Inheritance diagram for database\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdatabase_interface}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{classdatabase_interface_a209508028b44a6d4c1a07139418956ea}{get\+User\+ID}} (QString login)
+\begin{DoxyCompactList}\small\item\em Gets user ID by login. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classdatabase_interface_a00cfae535dc2680453934ef3a1b47c3d}{get\+Position}} (QString QID)
+\begin{DoxyCompactList}\small\item\em Gets next available position in queue. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classdatabase_interface_ab5cf9a9cf30efe37987ac89d03c8f8e7}{get\+QID}} (QString name)
+\begin{DoxyCompactList}\small\item\em Gets queue ID by name. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classdatabase_interface_a3764271df348e055623c074e8806160a}{get\+Nick}} (QString User\+ID)
+\begin{DoxyCompactList}\small\item\em Gets user nickname by user ID. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classdatabase_interface_a69d3899bfeede5189564bae1a99cf7fa}{get\+QName}} (QString QID)
+\begin{DoxyCompactList}\small\item\em Gets queue name by queue ID. \end{DoxyCompactList}\item 
+QString\+List \mbox{\hyperlink{classdatabase_interface_a12862d9f16f966096e29bd04eca32a6f}{get\+QMembers}} (QString QID)
+\begin{DoxyCompactList}\small\item\em Gets list of members in a queue. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classdatabase_interface_a6b6398daa6dab8fa2be8961b3659b32b}{authorize}} (QString login, QString password)
+\begin{DoxyCompactList}\small\item\em Authenticates user. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classdatabase_interface_a51e4386a12d3212f2154c573eb0b578f}{reg}} (QString login, QString nick, QString password, QString mail)
+\begin{DoxyCompactList}\small\item\em Registers new user. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classdatabase_interface_adcd59d9e804eed1d54e1fc126d4f7df3}{create}} (QString name, QString login)
+\begin{DoxyCompactList}\small\item\em Creates new queue. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classdatabase_interface_ab3e00715b4b889f1c21b29295c9ef8dc}{Go\+ToQ}} (QString QID, QString User)
+\begin{DoxyCompactList}\small\item\em Adds user to queue. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classdatabase_interface_aff6acf0b2ee6ec52b1a4f567c64e6fe1}{leave}} (QString login, QString QID)
+\begin{DoxyCompactList}\small\item\em Removes user from queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classdatabase_interface}{database\+Interface}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classdatabase_interface_af797aa9d3649ad04ebc44cc7229ff06e}{get\+Inst}} ()
+\begin{DoxyCompactList}\small\item\em Gets singleton instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdatabase_interface_ac3f8b0eab61314e752623f265a33005c}{database\+Interface}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs the database interface and initializes database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdatabase_interface_ad00598cc3197982f61c35d4070a21d64}{database\+Interface}} (\mbox{\hyperlink{classdatabase_interface}{database\+Interface}} \&)=delete
+\item 
+\mbox{\hyperlink{classdatabase_interface_a0e8b02e92894d2dd0968915a5e1bd7b2}{\texorpdfstring{$\sim$}{\string~}database\+Interface}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the database interface and closes connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdatabase_interface_a29404c4f0bcd828c7e9ba1ea049690f4}{interface\+Destroyer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classdatabase_interface}{database\+Interface} class provides a singleton interface for database operations. 
+
+This class handles all SQLite database interactions including user authentication, queue management, and data retrieval. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classdatabase_interface_ac3f8b0eab61314e752623f265a33005c}\index{databaseInterface@{databaseInterface}!databaseInterface@{databaseInterface}}
+\index{databaseInterface@{databaseInterface}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{databaseInterface()}{databaseInterface()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classdatabase_interface_ac3f8b0eab61314e752623f265a33005c} 
+database\+Interface\+::database\+Interface (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+Constructs the database interface and initializes database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent object \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classdatabase_interface_ad00598cc3197982f61c35d4070a21d64}\index{databaseInterface@{databaseInterface}!databaseInterface@{databaseInterface}}
+\index{databaseInterface@{databaseInterface}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{databaseInterface()}{databaseInterface()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classdatabase_interface_ad00598cc3197982f61c35d4070a21d64} 
+database\+Interface\+::database\+Interface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdatabase_interface}{database\+Interface}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [delete]}}
+
+\Hypertarget{classdatabase_interface_a0e8b02e92894d2dd0968915a5e1bd7b2}\index{databaseInterface@{databaseInterface}!````~databaseInterface@{\texorpdfstring{$\sim$}{\string~}databaseInterface}}
+\index{````~databaseInterface@{\texorpdfstring{$\sim$}{\string~}databaseInterface}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}databaseInterface()}{\string~databaseInterface()}}
+{\footnotesize\ttfamily \label{classdatabase_interface_a0e8b02e92894d2dd0968915a5e1bd7b2} 
+database\+Interface\+::\texorpdfstring{$\sim$}{\string~}database\+Interface (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Destroys the database interface and closes connection. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdatabase_interface_a6b6398daa6dab8fa2be8961b3659b32b}\index{databaseInterface@{databaseInterface}!authorize@{authorize}}
+\index{authorize@{authorize}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{authorize()}{authorize()}}
+{\footnotesize\ttfamily \label{classdatabase_interface_a6b6398daa6dab8fa2be8961b3659b32b} 
+QString database\+Interface\+::authorize (\begin{DoxyParamCaption}\item[{QString}]{login}{, }\item[{QString}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Authenticates user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & User login \\
+\hline
+{\em password} & User password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+"{}1"{} if successful, "{}0"{} otherwise 
+\end{DoxyReturn}
+\Hypertarget{classdatabase_interface_adcd59d9e804eed1d54e1fc126d4f7df3}\index{databaseInterface@{databaseInterface}!create@{create}}
+\index{create@{create}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \label{classdatabase_interface_adcd59d9e804eed1d54e1fc126d4f7df3} 
+QString database\+Interface\+::create (\begin{DoxyParamCaption}\item[{QString}]{name}{, }\item[{QString}]{login}{}\end{DoxyParamCaption})}
+
+
+
+Creates new queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Queue name \\
+\hline
+{\em login} & Creator\textquotesingle{}s login \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Creator\textquotesingle{}s nickname 
+\end{DoxyReturn}
+\Hypertarget{classdatabase_interface_af797aa9d3649ad04ebc44cc7229ff06e}\index{databaseInterface@{databaseInterface}!getInst@{getInst}}
+\index{getInst@{getInst}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{getInst()}{getInst()}}
+{\footnotesize\ttfamily \label{classdatabase_interface_af797aa9d3649ad04ebc44cc7229ff06e} 
+\mbox{\hyperlink{classdatabase_interface}{database\+Interface}} \texorpdfstring{$\ast$}{*} database\+Interface\+::get\+Inst (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets singleton instance. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{classdatabase_interface}{database\+Interface} instance 
+\end{DoxyReturn}
+\Hypertarget{classdatabase_interface_a3764271df348e055623c074e8806160a}\index{databaseInterface@{databaseInterface}!getNick@{getNick}}
+\index{getNick@{getNick}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{getNick()}{getNick()}}
+{\footnotesize\ttfamily \label{classdatabase_interface_a3764271df348e055623c074e8806160a} 
+QString database\+Interface\+::get\+Nick (\begin{DoxyParamCaption}\item[{QString}]{User\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Gets user nickname by user ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em User\+ID} & User identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nickname as QString 
+\end{DoxyReturn}
+\Hypertarget{classdatabase_interface_a00cfae535dc2680453934ef3a1b47c3d}\index{databaseInterface@{databaseInterface}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{classdatabase_interface_a00cfae535dc2680453934ef3a1b47c3d} 
+QString database\+Interface\+::get\+Position (\begin{DoxyParamCaption}\item[{QString}]{QID}{}\end{DoxyParamCaption})}
+
+
+
+Gets next available position in queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em QID} & Queue identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Next position number as QString 
+\end{DoxyReturn}
+\Hypertarget{classdatabase_interface_ab5cf9a9cf30efe37987ac89d03c8f8e7}\index{databaseInterface@{databaseInterface}!getQID@{getQID}}
+\index{getQID@{getQID}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{getQID()}{getQID()}}
+{\footnotesize\ttfamily \label{classdatabase_interface_ab5cf9a9cf30efe37987ac89d03c8f8e7} 
+QString database\+Interface\+::get\+QID (\begin{DoxyParamCaption}\item[{QString}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Gets queue ID by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Queue name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Queue ID as QString 
+\end{DoxyReturn}
+\Hypertarget{classdatabase_interface_a12862d9f16f966096e29bd04eca32a6f}\index{databaseInterface@{databaseInterface}!getQMembers@{getQMembers}}
+\index{getQMembers@{getQMembers}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{getQMembers()}{getQMembers()}}
+{\footnotesize\ttfamily \label{classdatabase_interface_a12862d9f16f966096e29bd04eca32a6f} 
+QString\+List database\+Interface\+::get\+QMembers (\begin{DoxyParamCaption}\item[{QString}]{QID}{}\end{DoxyParamCaption})}
+
+
+
+Gets list of members in a queue. 
+
+Gets list of members in a queue (up to 10).
+
+
+\begin{DoxyParams}{Parameters}
+{\em QID} & Queue identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QString\+List of user IDs in the queue 
+\end{DoxyReturn}
+\Hypertarget{classdatabase_interface_a69d3899bfeede5189564bae1a99cf7fa}\index{databaseInterface@{databaseInterface}!getQName@{getQName}}
+\index{getQName@{getQName}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{getQName()}{getQName()}}
+{\footnotesize\ttfamily \label{classdatabase_interface_a69d3899bfeede5189564bae1a99cf7fa} 
+QString database\+Interface\+::get\+QName (\begin{DoxyParamCaption}\item[{QString}]{QID}{}\end{DoxyParamCaption})}
+
+
+
+Gets queue name by queue ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em QID} & Queue identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Queue name as QString 
+\end{DoxyReturn}
+\Hypertarget{classdatabase_interface_a209508028b44a6d4c1a07139418956ea}\index{databaseInterface@{databaseInterface}!getUserID@{getUserID}}
+\index{getUserID@{getUserID}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{getUserID()}{getUserID()}}
+{\footnotesize\ttfamily \label{classdatabase_interface_a209508028b44a6d4c1a07139418956ea} 
+QString database\+Interface\+::get\+User\+ID (\begin{DoxyParamCaption}\item[{QString}]{login}{}\end{DoxyParamCaption})}
+
+
+
+Gets user ID by login. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & User login \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User ID as QString 
+\end{DoxyReturn}
+\Hypertarget{classdatabase_interface_ab3e00715b4b889f1c21b29295c9ef8dc}\index{databaseInterface@{databaseInterface}!GoToQ@{GoToQ}}
+\index{GoToQ@{GoToQ}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{GoToQ()}{GoToQ()}}
+{\footnotesize\ttfamily \label{classdatabase_interface_ab3e00715b4b889f1c21b29295c9ef8dc} 
+QString database\+Interface\+::\+Go\+ToQ (\begin{DoxyParamCaption}\item[{QString}]{QID}{, }\item[{QString}]{User}{}\end{DoxyParamCaption})}
+
+
+
+Adds user to queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em QID} & Queue identifier \\
+\hline
+{\em User} & User login \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Formatted message with queue info or error 
+\end{DoxyReturn}
+\Hypertarget{classdatabase_interface_aff6acf0b2ee6ec52b1a4f567c64e6fe1}\index{databaseInterface@{databaseInterface}!leave@{leave}}
+\index{leave@{leave}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{leave()}{leave()}}
+{\footnotesize\ttfamily \label{classdatabase_interface_aff6acf0b2ee6ec52b1a4f567c64e6fe1} 
+QString database\+Interface\+::leave (\begin{DoxyParamCaption}\item[{QString}]{login}{, }\item[{QString}]{QID}{}\end{DoxyParamCaption})}
+
+
+
+Removes user from queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & User login \\
+\hline
+{\em QID} & Queue identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Position that was vacated 
+\end{DoxyReturn}
+\Hypertarget{classdatabase_interface_a51e4386a12d3212f2154c573eb0b578f}\index{databaseInterface@{databaseInterface}!reg@{reg}}
+\index{reg@{reg}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{reg()}{reg()}}
+{\footnotesize\ttfamily \label{classdatabase_interface_a51e4386a12d3212f2154c573eb0b578f} 
+QString database\+Interface\+::reg (\begin{DoxyParamCaption}\item[{QString}]{login}{, }\item[{QString}]{nick}{, }\item[{QString}]{password}{, }\item[{QString}]{mail}{}\end{DoxyParamCaption})}
+
+
+
+Registers new user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & User login \\
+\hline
+{\em nick} & User nickname \\
+\hline
+{\em password} & User password \\
+\hline
+{\em mail} & User email \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+"{}1"{} if successful, "{}0"{} otherwise 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classdatabase_interface_a29404c4f0bcd828c7e9ba1ea049690f4}\index{databaseInterface@{databaseInterface}!interfaceDestroyer@{interfaceDestroyer}}
+\index{interfaceDestroyer@{interfaceDestroyer}!databaseInterface@{databaseInterface}}
+\doxysubsubsection{\texorpdfstring{interfaceDestroyer}{interfaceDestroyer}}
+{\footnotesize\ttfamily \label{classdatabase_interface_a29404c4f0bcd828c7e9ba1ea049690f4} 
+friend class \mbox{\hyperlink{classinterface_destroyer}{interface\+Destroyer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{databaseinterface_8h}{databaseinterface.\+h}}\item 
+\mbox{\hyperlink{databaseinterface_8cpp}{databaseinterface.\+cpp}}\end{DoxyCompactItemize}

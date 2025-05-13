@@ -1,0 +1,40 @@
+\doxysection{server.\+h}
+\hypertarget{server_8h_source}{}\label{server_8h_source}\mbox{\hyperlink{server_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SERVER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SERVER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QTcpServer>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QTcpSocket>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{databaseinterface_8h}{databaseinterface.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_server_ad5ec9462b520e59f7ea831e157ee5e59}{Server}}\ :\ \textcolor{keyword}{public}\ QTcpServer}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_server_ad5ec9462b520e59f7ea831e157ee5e59}{Server}}();}
+\DoxyCodeLine{00017\ \ \ \ \ QTcpSocket*\ \mbox{\hyperlink{class_server_ac7f958096890d0442b711a38000a02f7}{socket}};\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ QVector<QTcpSocket*>\ sockets;\ }
+\DoxyCodeLine{00021\ \ \ \ \ QMap<QString,\ QTcpSocket*>\ map;\ }
+\DoxyCodeLine{00022\ \ \ \ \ QByteArray\ data;\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ sendToClient(QString\ msg,\ QTcpSocket*\ client);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ sendToClients(QString\ msg,\ QStringList\ UserIDs);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ messageManager(QString\ msg,\ QTcpSocket*\ client);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_server_a3952d37b7bc53a4377f411d9ccaa9d62}{incomingConnection}}(qintptr\ socketDescriptor);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_server_ad7f0bc4f93fa08a16565f7f22cc562c5}{slotReadyRead}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_server_a3211e1b564de89a5098ee1fbef6df5a3}{clientDisconnected}}();}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SERVER\_H}}
+
+\end{DoxyCode}

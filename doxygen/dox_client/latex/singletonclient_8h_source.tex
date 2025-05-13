@@ -1,0 +1,63 @@
+\doxysection{singletonclient.\+h}
+\hypertarget{singletonclient_8h_source}{}\label{singletonclient_8h_source}\mbox{\hyperlink{singletonclient_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SINGLETONCLIENT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SINGLETONCLIENT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QTcpSocket>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QtNetwork>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QByteArray>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsingletonclient}{singletonclient}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsingleton_destroyer}{singletonDestroyer}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classsingletonclient}{singletonclient}}*\ p\_instance;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classsingleton_destroyer_a7240a63459deec5d91f7f4383da871c7}{\string~singletonDestroyer}}()\ \{\ \textcolor{keyword}{delete}\ p\_instance;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsingleton_destroyer_a218404240d91e06720af7a1a02a15024}{init}}(\mbox{\hyperlink{classsingletonclient}{singletonclient}}*\ p)\ \{\ p\_instance\ =\ p;\ \}}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsingletonclient_a799b3790931c71f18b3cc967d0295790}{singletonclient}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classsingletonclient_a799b3790931c71f18b3cc967d0295790}{singletonclient}}*\ p\_instance;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classsingletonclient_a4e45704fd0d3cbd40f1db73aeecdd986}{singletonDestroyer}}\ destroyer;}
+\DoxyCodeLine{00033\ \ \ \ \ QTcpSocket*\ mTcpSocket;\ }
+\DoxyCodeLine{00034\ \ \ \ \ QByteArray\ data;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classsingletonclient_a799b3790931c71f18b3cc967d0295790}{singletonclient}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classsingletonclient_ae22d833d9a9bb18aba90023bae28a680}{singletonclient}}(\mbox{\hyperlink{classsingletonclient_a799b3790931c71f18b3cc967d0295790}{singletonclient}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classsingletonclient_a34a2399f1dd0f29c78baaa74b78d570c}{\string~singletonclient}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsingletonclient_a4e45704fd0d3cbd40f1db73aeecdd986}{singletonDestroyer}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classsingletonclient_a799b3790931c71f18b3cc967d0295790}{singletonclient}}*\ \mbox{\hyperlink{classsingletonclient_aa848dd2c4047d09821fa21c42f1800df}{getInst}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsingletonclient_a2da527499ea35b3be93b4cddfa79a0ad}{sendToServer}}(QString\ msg);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsingletonclient_a28fa47af8a54d71a29b2f71cc11725be}{messageManager}}(QString\ msg);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ QString\ \mbox{\hyperlink{classsingletonclient_a8ca3bbd541d9d7f763d9ec8adda595ea}{Username}};\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ signals:}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsingletonclient_a29c7d54ea1057837b68e8132aaf6f632}{created}}(QString\ Qname,\ QString\ nick,\ QString\ QID);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsingletonclient_aaf95affa014a7ebc1e4d1939b144a077}{authorizationResult}}(\textcolor{keywordtype}{bool}\ result);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsingletonclient_a362f9051541e404ad577ba2a42d0458e}{registrationResult}}(\textcolor{keywordtype}{bool}\ result);}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsingletonclient_a1ee74f21c1020ad0814d22842c43690d}{logout}}();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsingletonclient_a9efffba2e24cbc9b5fbfc0a2c3c799a8}{added}}(QString\ QID,\ QString\ Qname,\ QString\ nick,\ QString\ position,\ QStringList\ members);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsingletonclient_ac7801237230ef2cfd846abec3e4da020}{newInQ}}(QString\ nick,\ QString\ position);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsingletonclient_a9defaed458c7eb99455d2c570c6df1df}{left}}(QString\ position);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsingletonclient_a069437141d62ee20fcaf53b8594ca6ae}{slotReadyRead}}();}
+\DoxyCodeLine{00077\ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SINGLETONCLIENT\_H}}
+
+\end{DoxyCode}

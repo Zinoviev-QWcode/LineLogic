@@ -1,0 +1,51 @@
+\doxysection{formsmanager.\+h}
+\hypertarget{formsmanager_8h_source}{}\label{formsmanager_8h_source}\mbox{\hyperlink{formsmanager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FORMSMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FORMSMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{authregform_8h}{authregform.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{queuehub_8h}{queuehub.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{queuecreator_8h}{queuecreator.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{queue_8h}{queue.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classforms_manager_a9c98a9f779ef92c54a93454decb66a4a}{formsManager}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classforms_manager_a9c98a9f779ef92c54a93454decb66a4a}{formsManager}}(QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classforms_manager_acf133469501b7f182f8301d09ee096d9}{\string~formsManager}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_auth_reg_form}{AuthRegForm}}*\ curr\_auth;\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_queue_hub}{QueueHub}}*\ hub;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_queue_creator}{QueueCreator}}*\ creator;\ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_queue}{Queue}}*\ q;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classforms_manager_af8a07f27eeea4f17096f49316f40e1e4}{fromLoginToHub}}(\textcolor{keywordtype}{bool}\ result);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classforms_manager_abf2a49ba7564fcccd8dc410582ac496f}{fromRegToHub}}(\textcolor{keywordtype}{bool}\ result);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classforms_manager_addfb9e0df4a699b8938c7eae7c6e6144}{fromHubToLogin}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classforms_manager_acd5bf7ee73980358d860b304dbb90fae}{fromHubToQ}}(QString\ QID,\ QString\ Qname,\ QString\ nick,\ QString\ position,\ QStringList\ members);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classforms_manager_a1a472e0fa3733d37e886d2862849809f}{fromQToHub}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classforms_manager_ae4d334ccaf046e3cc84dc1b06c28c1e1}{fromHubToCreator}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classforms_manager_ac2d44fd8d188b5b776cd35828283e127}{fromCreatorToHub}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classforms_manager_a49e4e0fc9f07297e459041454bd35c58}{fromCreatorToQ}}(QString\ name,\ QString\ nick,\ QString\ QID);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classforms_manager_a66ea80bd44045851537210442ecaf152}{QUpdate}}(QString\ nick,\ QString\ position);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classforms_manager_a8f12aeade5c0f214710c0912df108c6d}{Qleft}}(QString\ position);}
+\DoxyCodeLine{00093\ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FORMSMANAGER\_H}}
+
+\end{DoxyCode}

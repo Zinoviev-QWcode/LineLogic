@@ -1,0 +1,203 @@
+\doxysection{Queue Class Reference}
+\hypertarget{class_queue}{}\label{class_queue}\index{Queue@{Queue}}
+
+
+The \doxylink{class_queue}{Queue} class provides the interface for displaying and interacting with a queue.  
+
+
+
+
+{\ttfamily \#include $<$queue.\+h$>$}
+
+Inheritance diagram for Queue\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_queue}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_queue_a8127c4e19582b439ac5265abefedfb34}{Go\+Back}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when returning to hub. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_queue_a9aa54be69aa2d2d2bedd24a08d7c9b5d}{Queue}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_queue}{Queue} dialog. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_queue_a00d119db8fa3050da37746e82cbcf94f}{\texorpdfstring{$\sim$}{\string~}\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_queue}{Queue} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_queue_a5f8ef7b3ca84e343d004f8e051cfe6ab}{QMaker}} (QString name)
+\begin{DoxyCompactList}\small\item\em Sets the queue name display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_queue_a175bd573001eaf3d81025af88cc8e815}{Qfiller}} (QString nick, int position)
+\begin{DoxyCompactList}\small\item\em Fills a position in the queue with a nickname. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_queue_aba2914ee45b75bde8b61db804e649384}{set\+QID}} (QString QID)
+\begin{DoxyCompactList}\small\item\em Sets the queue ID display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_queue_ac2db57edbea1f82219bc9273c78c96e5}{set\+Position}} (QString pos)
+\begin{DoxyCompactList}\small\item\em Sets the user\textquotesingle{}s position display. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_queue_a827e57c816db629319855a4e9c18eda0}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current user position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_queue_ab826ea9e7e0a44df952b3bf618bd60f3}{update}} (QString position)
+\begin{DoxyCompactList}\small\item\em Updates the queue when a user leaves. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_queue_ab6eb2c745db2cbc5595eb2510da003cd}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears all queue displays. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_queue}{Queue} class provides the interface for displaying and interacting with a queue. 
+
+This class handles the visualization of queue members, user position, and queue management. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_queue_a9aa54be69aa2d2d2bedd24a08d7c9b5d}\index{Queue@{Queue}!Queue@{Queue}}
+\index{Queue@{Queue}!Queue@{Queue}}
+\doxysubsubsection{\texorpdfstring{Queue()}{Queue()}}
+{\footnotesize\ttfamily \label{class_queue_a9aa54be69aa2d2d2bedd24a08d7c9b5d} 
+Queue\+::\+Queue (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a \doxylink{class_queue}{Queue} dialog. 
+
+Constructs the \doxylink{class_queue}{Queue} dialog and initializes UI elements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent widget \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_queue_a00d119db8fa3050da37746e82cbcf94f}\index{Queue@{Queue}!````~Queue@{\texorpdfstring{$\sim$}{\string~}Queue}}
+\index{````~Queue@{\texorpdfstring{$\sim$}{\string~}Queue}!Queue@{Queue}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Queue()}{\string~Queue()}}
+{\footnotesize\ttfamily \label{class_queue_a00d119db8fa3050da37746e82cbcf94f} 
+Queue\+::\texorpdfstring{$\sim$}{\string~}\+Queue (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the \doxylink{class_queue}{Queue} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_queue_ab6eb2c745db2cbc5595eb2510da003cd}\index{Queue@{Queue}!clear@{clear}}
+\index{clear@{clear}!Queue@{Queue}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_queue_ab6eb2c745db2cbc5595eb2510da003cd} 
+void Queue\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears all queue displays. 
+
+\Hypertarget{class_queue_a827e57c816db629319855a4e9c18eda0}\index{Queue@{Queue}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Queue@{Queue}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{class_queue_a827e57c816db629319855a4e9c18eda0} 
+QString Queue\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current user position. 
+
+\begin{DoxyReturn}{Returns}
+Current position as QString 
+\end{DoxyReturn}
+\Hypertarget{class_queue_a8127c4e19582b439ac5265abefedfb34}\index{Queue@{Queue}!GoBack@{GoBack}}
+\index{GoBack@{GoBack}!Queue@{Queue}}
+\doxysubsubsection{\texorpdfstring{GoBack}{GoBack}}
+{\footnotesize\ttfamily \label{class_queue_a8127c4e19582b439ac5265abefedfb34} 
+void Queue\+::\+Go\+Back (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when returning to hub. 
+
+\Hypertarget{class_queue_a175bd573001eaf3d81025af88cc8e815}\index{Queue@{Queue}!Qfiller@{Qfiller}}
+\index{Qfiller@{Qfiller}!Queue@{Queue}}
+\doxysubsubsection{\texorpdfstring{Qfiller()}{Qfiller()}}
+{\footnotesize\ttfamily \label{class_queue_a175bd573001eaf3d81025af88cc8e815} 
+void Queue\+::\+Qfiller (\begin{DoxyParamCaption}\item[{QString}]{nick}{, }\item[{int}]{position}{}\end{DoxyParamCaption})}
+
+
+
+Fills a position in the queue with a nickname. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nick} & User nickname to display \\
+\hline
+{\em position} & Position in queue (0-\/based index) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_queue_a5f8ef7b3ca84e343d004f8e051cfe6ab}\index{Queue@{Queue}!QMaker@{QMaker}}
+\index{QMaker@{QMaker}!Queue@{Queue}}
+\doxysubsubsection{\texorpdfstring{QMaker()}{QMaker()}}
+{\footnotesize\ttfamily \label{class_queue_a5f8ef7b3ca84e343d004f8e051cfe6ab} 
+void Queue\+::\+QMaker (\begin{DoxyParamCaption}\item[{QString}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Sets the queue name display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_queue}{Queue} name to display \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_queue_ac2db57edbea1f82219bc9273c78c96e5}\index{Queue@{Queue}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Queue@{Queue}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \label{class_queue_ac2db57edbea1f82219bc9273c78c96e5} 
+void Queue\+::set\+Position (\begin{DoxyParamCaption}\item[{QString}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+Sets the user\textquotesingle{}s position display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Position in queue \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_queue_aba2914ee45b75bde8b61db804e649384}\index{Queue@{Queue}!setQID@{setQID}}
+\index{setQID@{setQID}!Queue@{Queue}}
+\doxysubsubsection{\texorpdfstring{setQID()}{setQID()}}
+{\footnotesize\ttfamily \label{class_queue_aba2914ee45b75bde8b61db804e649384} 
+void Queue\+::set\+QID (\begin{DoxyParamCaption}\item[{QString}]{QID}{}\end{DoxyParamCaption})}
+
+
+
+Sets the queue ID display. 
+
+Sets the queue ID display with zero-\/padding.
+
+
+\begin{DoxyParams}{Parameters}
+{\em QID} & \doxylink{class_queue}{Queue} identifier \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_queue_ab826ea9e7e0a44df952b3bf618bd60f3}\index{Queue@{Queue}!update@{update}}
+\index{update@{update}!Queue@{Queue}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_queue_ab826ea9e7e0a44df952b3bf618bd60f3} 
+void Queue\+::update (\begin{DoxyParamCaption}\item[{QString}]{position}{}\end{DoxyParamCaption})}
+
+
+
+Updates the queue when a user leaves. 
+
+Updates the queue when a user leaves by shifting members up.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position that became vacant\\
+\hline
+{\em position} & Position that became vacant (1-\/based index) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{queue_8h}{queue.\+h}}\item 
+\mbox{\hyperlink{queue_8cpp}{queue.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,235 @@
+\doxysection{singletonclient Class Reference}
+\hypertarget{classsingletonclient}{}\label{classsingletonclient}\index{singletonclient@{singletonclient}}
+
+
+The singletonclient class provides a singleton TCP client for server communication.  
+
+
+
+
+{\ttfamily \#include $<$singletonclient.\+h$>$}
+
+Inheritance diagram for singletonclient\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsingletonclient}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsingletonclient_a069437141d62ee20fcaf53b8594ca6ae}{slot\+Ready\+Read}} ()
+\begin{DoxyCompactList}\small\item\em Handles incoming data from server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsingletonclient_a29c7d54ea1057837b68e8132aaf6f632}{created}} (QString Qname, QString nick, QString QID)
+\item 
+void \mbox{\hyperlink{classsingletonclient_aaf95affa014a7ebc1e4d1939b144a077}{authorization\+Result}} (bool result)
+\item 
+void \mbox{\hyperlink{classsingletonclient_a362f9051541e404ad577ba2a42d0458e}{registration\+Result}} (bool result)
+\item 
+void \mbox{\hyperlink{classsingletonclient_a1ee74f21c1020ad0814d22842c43690d}{logout}} ()
+\item 
+void \mbox{\hyperlink{classsingletonclient_a9efffba2e24cbc9b5fbfc0a2c3c799a8}{added}} (QString QID, QString Qname, QString nick, QString position, QString\+List members)
+\item 
+void \mbox{\hyperlink{classsingletonclient_ac7801237230ef2cfd846abec3e4da020}{new\+InQ}} (QString nick, QString position)
+\item 
+void \mbox{\hyperlink{classsingletonclient_a9defaed458c7eb99455d2c570c6df1df}{left}} (QString position)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsingletonclient_a2da527499ea35b3be93b4cddfa79a0ad}{send\+To\+Server}} (QString msg)
+\begin{DoxyCompactList}\small\item\em Sends message to server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsingletonclient_a28fa47af8a54d71a29b2f71cc11725be}{message\+Manager}} (QString msg)
+\begin{DoxyCompactList}\small\item\em Handles incoming server messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsingletonclient}{singletonclient}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsingletonclient_aa848dd2c4047d09821fa21c42f1800df}{get\+Inst}} ()
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{classsingletonclient_a8ca3bbd541d9d7f763d9ec8adda595ea}{Username}}
+\begin{DoxyCompactList}\small\item\em Current user\textquotesingle{}s username. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsingletonclient_a799b3790931c71f18b3cc967d0295790}{singletonclient}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs the singleton client and establishes server connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsingletonclient_ae22d833d9a9bb18aba90023bae28a680}{singletonclient}} (\mbox{\hyperlink{classsingletonclient}{singletonclient}} \&)=delete
+\item 
+\mbox{\hyperlink{classsingletonclient_a34a2399f1dd0f29c78baaa74b78d570c}{\texorpdfstring{$\sim$}{\string~}singletonclient}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the singleton client and closes connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsingletonclient_a4e45704fd0d3cbd40f1db73aeecdd986}{singleton\+Destroyer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The singletonclient class provides a singleton TCP client for server communication. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsingletonclient_a799b3790931c71f18b3cc967d0295790}\index{singletonclient@{singletonclient}!singletonclient@{singletonclient}}
+\index{singletonclient@{singletonclient}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{singletonclient()}{singletonclient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsingletonclient_a799b3790931c71f18b3cc967d0295790} 
+singletonclient\+::singletonclient (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+Constructs the singleton client and establishes server connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent object \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsingletonclient_ae22d833d9a9bb18aba90023bae28a680}\index{singletonclient@{singletonclient}!singletonclient@{singletonclient}}
+\index{singletonclient@{singletonclient}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{singletonclient()}{singletonclient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsingletonclient_ae22d833d9a9bb18aba90023bae28a680} 
+singletonclient\+::singletonclient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsingletonclient}{singletonclient}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [delete]}}
+
+\Hypertarget{classsingletonclient_a34a2399f1dd0f29c78baaa74b78d570c}\index{singletonclient@{singletonclient}!````~singletonclient@{\texorpdfstring{$\sim$}{\string~}singletonclient}}
+\index{````~singletonclient@{\texorpdfstring{$\sim$}{\string~}singletonclient}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}singletonclient()}{\string~singletonclient()}}
+{\footnotesize\ttfamily \label{classsingletonclient_a34a2399f1dd0f29c78baaa74b78d570c} 
+singletonclient\+::\texorpdfstring{$\sim$}{\string~}singletonclient (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Destroys the singleton client and closes connection. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsingletonclient_a9efffba2e24cbc9b5fbfc0a2c3c799a8}\index{singletonclient@{singletonclient}!added@{added}}
+\index{added@{added}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{added}{added}}
+{\footnotesize\ttfamily \label{classsingletonclient_a9efffba2e24cbc9b5fbfc0a2c3c799a8} 
+void singletonclient\+::added (\begin{DoxyParamCaption}\item[{QString}]{QID}{, }\item[{QString}]{Qname}{, }\item[{QString}]{nick}{, }\item[{QString}]{position}{, }\item[{QString\+List}]{members}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{classsingletonclient_aaf95affa014a7ebc1e4d1939b144a077}\index{singletonclient@{singletonclient}!authorizationResult@{authorizationResult}}
+\index{authorizationResult@{authorizationResult}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{authorizationResult}{authorizationResult}}
+{\footnotesize\ttfamily \label{classsingletonclient_aaf95affa014a7ebc1e4d1939b144a077} 
+void singletonclient\+::authorization\+Result (\begin{DoxyParamCaption}\item[{bool}]{result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{classsingletonclient_a29c7d54ea1057837b68e8132aaf6f632}\index{singletonclient@{singletonclient}!created@{created}}
+\index{created@{created}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{created}{created}}
+{\footnotesize\ttfamily \label{classsingletonclient_a29c7d54ea1057837b68e8132aaf6f632} 
+void singletonclient\+::created (\begin{DoxyParamCaption}\item[{QString}]{Qname}{, }\item[{QString}]{nick}{, }\item[{QString}]{QID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{classsingletonclient_aa848dd2c4047d09821fa21c42f1800df}\index{singletonclient@{singletonclient}!getInst@{getInst}}
+\index{getInst@{getInst}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{getInst()}{getInst()}}
+{\footnotesize\ttfamily \label{classsingletonclient_aa848dd2c4047d09821fa21c42f1800df} 
+\mbox{\hyperlink{classsingletonclient}{singletonclient}} \texorpdfstring{$\ast$}{*} singletonclient\+::get\+Inst (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to singleton instance 
+\end{DoxyReturn}
+\Hypertarget{classsingletonclient_a9defaed458c7eb99455d2c570c6df1df}\index{singletonclient@{singletonclient}!left@{left}}
+\index{left@{left}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily \label{classsingletonclient_a9defaed458c7eb99455d2c570c6df1df} 
+void singletonclient\+::left (\begin{DoxyParamCaption}\item[{QString}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{classsingletonclient_a1ee74f21c1020ad0814d22842c43690d}\index{singletonclient@{singletonclient}!logout@{logout}}
+\index{logout@{logout}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{logout}{logout}}
+{\footnotesize\ttfamily \label{classsingletonclient_a1ee74f21c1020ad0814d22842c43690d} 
+void singletonclient\+::logout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{classsingletonclient_a28fa47af8a54d71a29b2f71cc11725be}\index{singletonclient@{singletonclient}!messageManager@{messageManager}}
+\index{messageManager@{messageManager}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{messageManager()}{messageManager()}}
+{\footnotesize\ttfamily \label{classsingletonclient_a28fa47af8a54d71a29b2f71cc11725be} 
+void singletonclient\+::message\+Manager (\begin{DoxyParamCaption}\item[{QString}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Handles incoming server messages. 
+
+Parses and routes incoming server messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Received message \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsingletonclient_ac7801237230ef2cfd846abec3e4da020}\index{singletonclient@{singletonclient}!newInQ@{newInQ}}
+\index{newInQ@{newInQ}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{newInQ}{newInQ}}
+{\footnotesize\ttfamily \label{classsingletonclient_ac7801237230ef2cfd846abec3e4da020} 
+void singletonclient\+::new\+InQ (\begin{DoxyParamCaption}\item[{QString}]{nick}{, }\item[{QString}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{classsingletonclient_a362f9051541e404ad577ba2a42d0458e}\index{singletonclient@{singletonclient}!registrationResult@{registrationResult}}
+\index{registrationResult@{registrationResult}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{registrationResult}{registrationResult}}
+{\footnotesize\ttfamily \label{classsingletonclient_a362f9051541e404ad577ba2a42d0458e} 
+void singletonclient\+::registration\+Result (\begin{DoxyParamCaption}\item[{bool}]{result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\Hypertarget{classsingletonclient_a2da527499ea35b3be93b4cddfa79a0ad}\index{singletonclient@{singletonclient}!sendToServer@{sendToServer}}
+\index{sendToServer@{sendToServer}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{sendToServer()}{sendToServer()}}
+{\footnotesize\ttfamily \label{classsingletonclient_a2da527499ea35b3be93b4cddfa79a0ad} 
+void singletonclient\+::send\+To\+Server (\begin{DoxyParamCaption}\item[{QString}]{msg}{}\end{DoxyParamCaption})}
+
+
+
+Sends message to server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Message to send \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsingletonclient_a069437141d62ee20fcaf53b8594ca6ae}\index{singletonclient@{singletonclient}!slotReadyRead@{slotReadyRead}}
+\index{slotReadyRead@{slotReadyRead}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{slotReadyRead}{slotReadyRead}}
+{\footnotesize\ttfamily \label{classsingletonclient_a069437141d62ee20fcaf53b8594ca6ae} 
+void singletonclient\+::slot\+Ready\+Read (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles incoming data from server. 
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classsingletonclient_a4e45704fd0d3cbd40f1db73aeecdd986}\index{singletonclient@{singletonclient}!singletonDestroyer@{singletonDestroyer}}
+\index{singletonDestroyer@{singletonDestroyer}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{singletonDestroyer}{singletonDestroyer}}
+{\footnotesize\ttfamily \label{classsingletonclient_a4e45704fd0d3cbd40f1db73aeecdd986} 
+friend class \mbox{\hyperlink{classsingleton_destroyer}{singleton\+Destroyer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsingletonclient_a8ca3bbd541d9d7f763d9ec8adda595ea}\index{singletonclient@{singletonclient}!Username@{Username}}
+\index{Username@{Username}!singletonclient@{singletonclient}}
+\doxysubsubsection{\texorpdfstring{Username}{Username}}
+{\footnotesize\ttfamily \label{classsingletonclient_a8ca3bbd541d9d7f763d9ec8adda595ea} 
+QString singletonclient\+::\+Username}
+
+
+
+Current user\textquotesingle{}s username. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{singletonclient_8h}{singletonclient.\+h}}\item 
+\mbox{\hyperlink{singletonclient_8cpp}{singletonclient.\+cpp}}\end{DoxyCompactItemize}

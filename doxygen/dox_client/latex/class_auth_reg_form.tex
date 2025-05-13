@@ -1,0 +1,135 @@
+\doxysection{Auth\+Reg\+Form Class Reference}
+\hypertarget{class_auth_reg_form}{}\label{class_auth_reg_form}\index{AuthRegForm@{AuthRegForm}}
+
+
+The \doxylink{class_auth_reg_form}{Auth\+Reg\+Form} class provides the authentication and registration interface.  
+
+
+
+
+{\ttfamily \#include $<$authregform.\+h$>$}
+
+Inheritance diagram for Auth\+Reg\+Form\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_auth_reg_form}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_auth_reg_form_a16ebb669674e2027f9a4b0c5fb5e15cc}{registrate}} (QString, QString, QString, QString, QString)
+\begin{DoxyCompactList}\small\item\em Signal emitted when registration is requested. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_auth_reg_form_a7ec2ba2a7980453c629e141a90602e68}{Auth\+Reg\+Form}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{class_auth_reg_form}{Auth\+Reg\+Form} dialog. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_auth_reg_form_a8b95ad00c5d29338f850a0f179b12078}{\texorpdfstring{$\sim$}{\string~}\+Auth\+Reg\+Form}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{class_auth_reg_form}{Auth\+Reg\+Form} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_auth_reg_form_ad352ff103aa3c3d18d71e79e9772e8c1}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears all input fields in the form. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_auth_reg_form_a6792110e2e7cd102eb4f604f47844d0c}{error}} ()
+\begin{DoxyCompactList}\small\item\em Displays an error message in the form. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_auth_reg_form_a35a1cffa79e1bfd342c31a7e37db87b0}{get\+Login}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current login value from the form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_auth_reg_form}{Auth\+Reg\+Form} class provides the authentication and registration interface. 
+
+This class handles both user login and registration processes, including input validation and UI state management for switching between login and registration modes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_auth_reg_form_a7ec2ba2a7980453c629e141a90602e68}\index{AuthRegForm@{AuthRegForm}!AuthRegForm@{AuthRegForm}}
+\index{AuthRegForm@{AuthRegForm}!AuthRegForm@{AuthRegForm}}
+\doxysubsubsection{\texorpdfstring{AuthRegForm()}{AuthRegForm()}}
+{\footnotesize\ttfamily \label{class_auth_reg_form_a7ec2ba2a7980453c629e141a90602e68} 
+Auth\+Reg\+Form\+::\+Auth\+Reg\+Form (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs an \doxylink{class_auth_reg_form}{Auth\+Reg\+Form} dialog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent widget \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_auth_reg_form_a8b95ad00c5d29338f850a0f179b12078}\index{AuthRegForm@{AuthRegForm}!````~AuthRegForm@{\texorpdfstring{$\sim$}{\string~}AuthRegForm}}
+\index{````~AuthRegForm@{\texorpdfstring{$\sim$}{\string~}AuthRegForm}!AuthRegForm@{AuthRegForm}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}AuthRegForm()}{\string~AuthRegForm()}}
+{\footnotesize\ttfamily \label{class_auth_reg_form_a8b95ad00c5d29338f850a0f179b12078} 
+Auth\+Reg\+Form\+::\texorpdfstring{$\sim$}{\string~}\+Auth\+Reg\+Form (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the \doxylink{class_auth_reg_form}{Auth\+Reg\+Form} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_auth_reg_form_ad352ff103aa3c3d18d71e79e9772e8c1}\index{AuthRegForm@{AuthRegForm}!clear@{clear}}
+\index{clear@{clear}!AuthRegForm@{AuthRegForm}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{class_auth_reg_form_ad352ff103aa3c3d18d71e79e9772e8c1} 
+void Auth\+Reg\+Form\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears all input fields in the form. 
+
+\Hypertarget{class_auth_reg_form_a6792110e2e7cd102eb4f604f47844d0c}\index{AuthRegForm@{AuthRegForm}!error@{error}}
+\index{error@{error}!AuthRegForm@{AuthRegForm}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily \label{class_auth_reg_form_a6792110e2e7cd102eb4f604f47844d0c} 
+void Auth\+Reg\+Form\+::error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Displays an error message in the form. 
+
+\Hypertarget{class_auth_reg_form_a35a1cffa79e1bfd342c31a7e37db87b0}\index{AuthRegForm@{AuthRegForm}!getLogin@{getLogin}}
+\index{getLogin@{getLogin}!AuthRegForm@{AuthRegForm}}
+\doxysubsubsection{\texorpdfstring{getLogin()}{getLogin()}}
+{\footnotesize\ttfamily \label{class_auth_reg_form_a35a1cffa79e1bfd342c31a7e37db87b0} 
+QString Auth\+Reg\+Form\+::get\+Login (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current login value from the form. 
+
+\begin{DoxyReturn}{Returns}
+QString containing the login text.
+
+QString containing the login text 
+\end{DoxyReturn}
+\Hypertarget{class_auth_reg_form_a16ebb669674e2027f9a4b0c5fb5e15cc}\index{AuthRegForm@{AuthRegForm}!registrate@{registrate}}
+\index{registrate@{registrate}!AuthRegForm@{AuthRegForm}}
+\doxysubsubsection{\texorpdfstring{registrate}{registrate}}
+{\footnotesize\ttfamily \label{class_auth_reg_form_a16ebb669674e2027f9a4b0c5fb5e15cc} 
+void Auth\+Reg\+Form\+::registrate (\begin{DoxyParamCaption}\item[{QString}]{}{, }\item[{QString}]{}{, }\item[{QString}]{}{, }\item[{QString}]{}{, }\item[{QString}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when registration is requested. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login} & User\textquotesingle{}s login \\
+\hline
+{\em nick} & User\textquotesingle{}s nickname \\
+\hline
+{\em password} & User\textquotesingle{}s password \\
+\hline
+{\em mail} & User\textquotesingle{}s email \\
+\hline
+{\em check} & Password confirmation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{authregform_8h}{authregform.\+h}}\item 
+\mbox{\hyperlink{authregform_8cpp}{authregform.\+cpp}}\end{DoxyCompactItemize}
